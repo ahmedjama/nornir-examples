@@ -1,0 +1,12 @@
+---
+router1.bma:
+ hostname: 192.168.1.19
+ username: 'cisco'
+ password: 'cisco'
+ platform: ios
+ groups:
+     - cisco_ios
+ data:
+     site: bma
+     role: router
+     type: network_device

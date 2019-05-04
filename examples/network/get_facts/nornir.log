@@ -1,0 +1,84 @@
+2019-04-28 00:02:47,193 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 00:02:47,231 - nornir.core.task -    ERROR -      start() - Host 'router1.bma': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2019-04-28 00:03:25,371 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 00:03:25,390 - nornir.core.task -    ERROR -      start() - Host 'router1.bma': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/napalm/base/__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2019-04-28 00:06:01,398 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 00:06:55,153 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 00:07:55,215 - nornir.core.task -    ERROR -      start() - Host 'router1.bma': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/netmiko/base_connection.py", line 858, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/paramiko/client.py", line 343, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/paramiko/util.py", line 280, in retry_on_signal
+    return function()
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/paramiko/client.py", line 343, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/napalm/base/base.py", line 87, in _netmiko_open
+    **netmiko_optional_args
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/netmiko/base_connection.py", line 312, in __init__
+    self.establish_connection()
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/netmiko/base_connection.py", line 864, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 192.168.2.19:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 49, in napalm_get
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/napalm/ios/ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/Users/ahmed.jama/Documents/Code/GitHub/nornir-examples/venv/lib/python3.7/site-packages/napalm/base/base.py", line 90, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 192.168.2.19
+
+2019-04-28 00:08:31,070 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 00:09:17,509 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 21:32:48,946 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
+2019-04-28 21:33:23,912 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts']} on 1 hosts
